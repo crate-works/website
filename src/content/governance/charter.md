@@ -3,21 +3,21 @@ title: Charter
 order: 1
 ---
 
-# Charter for the [FIXME] Organization
+# Charter for CrateWorks
 
-This is the organizational charter for the [FIXME] Organization (the "Organization"). By adding their name to the [Steering Committee.md file](./STEERING-COMMITTEE.md), Steering Committee members agree as follows.
+This is the organisational charter for CrateWorks (the "Organisation"). By adding their name to the [steering committee roster](/governance/steering-committee), Steering Committee members agree as follows.
 
 ## 1. Mission
 
-[Set out mission of the Organization].
+CrateWorks exists to maintain an RO-Crate API specification and steward the open-source tools that speak it. Our goal is a composable, interoperable workbench that lets researchers, archivists, and developers swap any tool for any other and trust the pieces still fit together, because they all share the same data format and access protocol.
 
 ## 2. Steering Committee
 
-**2.1 Purpose**. The Steering Committee will be responsible for all technical oversight, project approval and oversight, policy oversight, and trademark management for the Organization.
+**2.1 Purpose**. The Steering Committee will be responsible for all technical oversight, project approval and oversight, and policy oversight for the Organisation.
 
-**2.2 Composition**. The Steering Committee voting members are listed in the steering-committee.md file in the repository.
+**2.2 Composition**. The Steering Committee voting members are listed in the [steering committee roster](/governance/steering-committee).
 Voting members may be added or removed by no less than 3/4 affirmative vote of the Steering Committee.
-The Steering Committee will appoint a Chair responsible for organizing Steering Committee activity.
+The Steering Committee will appoint a Chair responsible for organising Steering Committee activity.
 
 ## 3. Voting
 
@@ -33,34 +33,25 @@ In addition to the method set out in section 2.2, the membership of a Steering C
 
 **4.2 Unreachable Member**. If a member is unresponsive at its listed handle for more than three months the Steering Committee may vote to remove the member.
 
-## 5. Trademarks
+## 5. No Confidentiality
 
-Any names, trademarks, service marks, logos, mascots, or similar indicators of source or origin and the goodwill associated with them arising out of the Organization's activities or Organization projects' activities (the "Marks"), are controlled by the Organization. Steering Committee members may only use the Marks in accordance with the Organization's [trademark policy](./TRADEMARKS.md). If a Steering Committee member is terminated or removed from the Steering Committee, any rights the Steering Committee member may have in the Marks revert to the Organization.
+Information disclosed in connection with any of the Organisation's activities, including but not limited to meetings, Contributions, and submissions, is not confidential, regardless of any markings or statements to the contrary.
 
-## 6. Antitrust Policy
+## 6. Project Criteria
 
-The Steering Committee is bound by the Organization's [antitrust policy](./ANTITRUST.md).
-
-## 7. No Confidentiality
-
-Information disclosed in connection with any of the Organization's activities, including but not limited to meetings, Contributions, and submissions, is not confidential, regardless of any markings or statements to the contrary.
-
-## 8. Project Criteria
-
-In order to be eligible to be a Organization project, a project must:
+In order to be eligible to be an Organisation project, a project must:
 
 * Be approved by the Steering Committee.
 * Agree to follow the guidance and direction of the Steering Committee.
-* Use only the following outbound licenses or agreements unless otherwise approved:
-  - For code, a license on the Open Source Initiative's list of [Popular Licenses](https://opensource.org/licenses).
-  - For data, a license on the Open Knowledge Foundation's list of [Recommended Conformant Licenses](http://opendefinition.org/licenses/).
-  - For specifications, a community developed and maintained specification agreement, such the [Open Web Foundation Agreements](https://www.openwebfoundation.org/the-agreements) or [Community Specification Agreement](https://github.com/CommunitySpecification/1.0).
-* Include and adhere to the Organization's policies, including the [trademark policy](./TRADEMARKS.md), the [antitrust policy](./ANTITRUST.md), and the [code of conduct](./CODE-OF-CONDUCT.md).
+* Use only the following outbound licences or agreements unless otherwise approved:
+  - For code, a licence on the Open Source Initiative's list of [Popular Licenses](https://opensource.org/licenses).
+  - For data, a licence on the Open Knowledge Foundation's list of [Recommended Conformant Licenses](http://opendefinition.org/licenses/).
+  - For specifications, a community developed and maintained specification agreement, such as the [Open Web Foundation Agreements](https://www.openwebfoundation.org/the-agreements) or [Community Specification Agreement](https://github.com/CommunitySpecification/1.0).
+* Include and adhere to the Organisation's policies, including the [code of conduct](/governance/code-of-conduct).
 
-## 9. Amendments
+## 7. Amendments
 
-Amendments to this charter, the [antitrust policy](./ANTITRUST.md), the [trademark policy](./TRADEMARKS.md), or the [code of conduct](./CODE-OF-CONDUCT.md) may only be made with at least a 3/4 affirmative vote of the Steering Committee.
+Amendments to this charter or the [code of conduct](/governance/code-of-conduct) may only be made with at least a 3/4 affirmative vote of the Steering Committee.
 
 ---
-Part of MVG-0.1-beta.
-Made with love by GitHub. Licensed under the [CC-BY 4.0 License](https://creativecommons.org/licenses/by/4.0/).
+Adapted from [MVG-0.1-beta](https://github.com/github/MVG) by GitHub, licensed under the [CC-BY 4.0 License](https://creativecommons.org/licenses/by/4.0/).

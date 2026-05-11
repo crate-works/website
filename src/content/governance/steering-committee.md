@@ -5,13 +5,17 @@ order: 3
 
 # Steering Committee
 
-This document lists the members of the Organization's Steering Committee. Voting members may be added once approved by the Steering Committee as described in the [charter](./CHARTER.md). By adding your name to this list you are agreeing to abide by all Organization polices, including the [charter](./CHARTER.md), the [code of conduct](./CODE-OF-CONDUCT.md), the [trademark policy](./TRADEMARKS.md), and the [antitrust policy](./ANTITRUST.md). If you are serving on the Steering Committee because of your affiliation with another organization (designated below), you represent that you have authority to bind that organization to these policies.
+This document lists the members of the Organisation's Steering Committee. Voting members may be added once approved by the Steering Committee as described in the [charter](/governance/charter). By adding your name to this list you are agreeing to abide by all Organisation policies, including the [charter](/governance/charter) and the [code of conduct](/governance/code-of-conduct). If you are serving on the Steering Committee because of your affiliation with another organisation (designated below), you represent that you have authority to bind that organisation to these policies.
 
-| **NAME** | **Handle** | **Affiliated Organization** |
-| --- | --- | --- |
-| [Steering Committee Member] | [handle ] | [affiliation] |
-|  ... | ... | ... |
+| **Name**        | **Handle**                                     | **Affiliation** |
+| --------------- | ---------------------------------------------- | --------------- |
+| John Ferlito    | [@johnf](https://github.com/johnf)             | PARADISEC       |
+| Nick Thieberger | [@nthieberger](https://github.com/nthieberger) | PARADISEC       |
+| Peter Sefton    | [@ptsefton](https://github.com/ptsefton)       | LDaCA           |
+| Moises Sacal    | [@moisbo](https://github.com/moisbo)           | LDaCA           |
+
+_Additional voting members will be added by Steering Committee vote as the Organisation forms._
 
 ---
-Part of MVG-0.1-beta.
-Made with love by GitHub. Licensed under the [CC-BY 4.0 License](https://creativecommons.org/licenses/by/4.0/).
+
+Adapted from [MVG-0.1-beta](https://github.com/github/MVG) by GitHub, licensed under the [CC-BY 4.0 License](https://creativecommons.org/licenses/by/4.0/).
