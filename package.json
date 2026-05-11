@@ -11,7 +11,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint:biome": "biome check .",
-    "lint:knip": "knip"
+    "lint:knip": "knip",
+    "lint:types": "tsc --noEmit"
   },
   "dependencies": {
     "astro": "^6.3.1"
@@ -19,8 +20,12 @@
   "packageManager": "pnpm@11.0.9+sha512.34ce82e6780233cf9cad8685029a8f81d2e06196c5a9bad98879f7424940c6817c4e4524fb7d38b8553ceed48b9758b8ebaf1abd3600c232c4c8cf7366086f38",
   "devDependencies": {
     "@biomejs/biome": "^2.4.14",
+    "@commitlint/cli": "^20.5.3",
+    "@commitlint/config-conventional": "^20.5.3",
+    "@commitlint/types": "^20.5.0",
     "@types/node": "^24.12.3",
     "knip": "^6.12.1",
+    "lefthook": "^2.1.6",
     "typescript": "^6.0.3"
   }
 }
