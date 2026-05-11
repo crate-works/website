@@ -5,8 +5,6 @@ pre-commit:
       run: pnpm run lint:biome
     - name: knip
       run: pnpm run lint:knip
-    - name: typecheck
-      run: pnpm run lint:types
     - name: astro
       run: pnpm run lint:astro
 

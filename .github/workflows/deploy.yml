@@ -39,10 +39,7 @@ jobs:
       - name: Lint (knip)
         run: pnpm lint:knip
 
-      - name: Typecheck (tsc)
-        run: pnpm lint:types
-
-      - name: Typecheck (astro)
+      - name: Typecheck
         run: pnpm lint:astro
 
       - name: Build
