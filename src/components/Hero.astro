@@ -1,0 +1,27 @@
+---
+import Logo from './Logo.astro';
+import Wordmark from './Wordmark.astro';
+---
+
+<section class="px-6 py-20 sm:py-28 max-w-6xl mx-auto">
+  <div class="flex flex-col items-start gap-6">
+    <div class="flex items-center gap-4">
+      <Logo size={72} class="text-accent" />
+      <Wordmark class="text-3xl sm:text-4xl" />
+    </div>
+
+    <h1 class="text-4xl sm:text-6xl font-bold tracking-tight leading-tight max-w-3xl">
+      A workbench of tools for <span class="text-accent">RO-Crate</span> research data.
+    </h1>
+
+    <p class="text-lg sm:text-xl text-muted max-w-2xl leading-relaxed">
+      CrateWorks rolls up an RO-Crate API specification and the open-source tools built around it into one governed home — so researchers, archivists, and
+      developers can pick up any tool on the bench and trust it to fit with the others.
+    </p>
+
+    <div class="flex flex-wrap gap-3 pt-2">
+      <a href="#workbench" class="btn-primary">See the tools</a>
+      <a href="#architecture" class="btn-secondary">How it fits together</a>
+    </div>
+  </div>
+</section>

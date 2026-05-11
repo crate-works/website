@@ -1,0 +1,23 @@
+---
+import { getCollection, render } from 'astro:content';
+import DocArticle from '../../components/DocArticle.astro';
+import Layout from '../../layouts/Layout.astro';
+
+export const getStaticPaths = async () => {
+  const docs = await getCollection('governance');
+  return docs.map((doc) => ({
+    params: { slug: doc.id },
+    props: { doc },
+  }));
+};
+
+const { doc } = Astro.props;
+const { Content } = await render(doc);
+---
+
+<Layout title={doc.data.title}>
+  <DocArticle homeHref="/governance" homeLabel="Governance">
+    <span slot="trailing">{doc.data.title}</span>
+    <Content />
+  </DocArticle>
+</Layout>

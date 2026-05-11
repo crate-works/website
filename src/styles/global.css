@@ -1,0 +1,87 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-bg: #ffffff;
+  --color-fg: #0f1115;
+  --color-muted: #5b6472;
+  --color-accent: #b25a1f;
+  --color-accent-soft: #f2e2d2;
+  --color-border: #e6e4df;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "JetBrains Mono", Menlo, Consolas, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0f1115;
+    --color-fg: #e8e6e1;
+    --color-muted: #8a8f99;
+    --color-accent: #f2a06a;
+    --color-accent-soft: #2a1d12;
+    --color-border: #1f242c;
+  }
+}
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    color: var(--color-fg);
+    background: var(--color-bg);
+  }
+
+  body {
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-lg border border-border bg-bg p-6 transition-colors hover:border-accent;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-outline-accent {
+    @apply inline-flex items-center rounded-md px-5 py-2.5 font-medium no-underline transition-colors;
+  }
+  .btn-primary {
+    @apply bg-accent text-white hover:opacity-90;
+  }
+  .btn-secondary {
+    @apply border border-border hover:border-accent;
+  }
+  .btn-outline-accent {
+    @apply border border-accent text-accent hover:bg-accent hover:text-white;
+  }
+
+  .prose {
+    --tw-prose-body: var(--color-fg);
+    --tw-prose-headings: var(--color-fg);
+    --tw-prose-lead: var(--color-muted);
+    --tw-prose-links: var(--color-accent);
+    --tw-prose-bold: var(--color-fg);
+    --tw-prose-counters: var(--color-muted);
+    --tw-prose-bullets: var(--color-border);
+    --tw-prose-hr: var(--color-border);
+    --tw-prose-quotes: var(--color-muted);
+    --tw-prose-quote-borders: var(--color-border);
+    --tw-prose-captions: var(--color-muted);
+    --tw-prose-code: var(--color-fg);
+    --tw-prose-pre-code: var(--color-fg);
+    --tw-prose-pre-bg: var(--color-accent-soft);
+    --tw-prose-th-borders: var(--color-border);
+    --tw-prose-td-borders: var(--color-border);
+  }
+}

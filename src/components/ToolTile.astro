@@ -1,0 +1,36 @@
+---
+type Status = 'stable' | 'beta' | 'preview';
+
+interface Props {
+  name: string;
+  tagline: string;
+  summary: string;
+  repo: string;
+  site?: string;
+  status?: Status;
+}
+
+const { name, tagline, summary, repo, site, status } = Astro.props;
+const titleHref = site ?? repo;
+const statusLabel = status && status[0].toUpperCase() + status.slice(1);
+---
+
+<article class="card group flex flex-col gap-3">
+  <div class="flex items-start justify-between gap-3">
+    <h3 class="text-xl font-semibold tracking-tight">
+      <a href={titleHref} rel="noopener noreferrer" target="_blank" class="no-underline group-hover:text-accent">{name}</a>
+    </h3>
+    {statusLabel && (
+        <span class="shrink-0 text-xs uppercase tracking-wide font-medium px-2 py-0.5 rounded-full border border-border text-muted">{statusLabel}</span>
+      )}
+  </div>
+
+  <p class="font-medium text-fg">{tagline}</p>
+  <p class="text-sm text-muted leading-relaxed flex-1">{summary}</p>
+
+  {site && (
+      <a href={repo} rel="noopener noreferrer" target="_blank" class="text-sm text-muted hover:text-fg mt-auto pt-2">
+        Repository &rarr;
+      </a>
+    )}
+</article>

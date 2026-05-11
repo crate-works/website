@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Not found" description="The page you were looking for does not exist.">
+  <section class="px-6 py-24 sm:py-32 max-w-3xl mx-auto text-center">
+    <p class="text-sm uppercase tracking-widest text-accent font-medium">404</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mt-3">Nothing on the bench here.</h1>
+    <p class="text-muted mt-4 leading-relaxed">
+      The page you were looking for has moved, been renamed, or never existed. Head back to the workbench or pick up where you left off.
+    </p>
+
+    <div class="flex flex-wrap justify-center gap-3 mt-10">
+      <a href="/" class="btn-primary">Home</a>
+      <a href="/blog" class="btn-secondary">Blog</a>
+      <a href="/governance" class="btn-secondary">Governance</a>
+    </div>
+  </section>
+</Layout>

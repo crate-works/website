@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { byOrder } from '../../lib/collections';
+
+const docs = (await getCollection('governance')).sort(byOrder);
+---
+
+<Layout title="Governance" description="The charter, code of conduct, and governance policies for CrateWorks.">
+  <section class="px-6 py-16 sm:py-24 max-w-4xl mx-auto">
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">Governance</h1>
+    <p class="text-muted mt-4 max-w-2xl leading-relaxed">
+      CrateWorks adopts the GitHub Minimum Viable Governance (MVG) framework. These documents define how the organisation operates and what every CrateWorks
+      project agrees to.
+    </p>
+
+    <ul class="mt-12 grid sm:grid-cols-2 gap-5 list-none p-0">
+      {docs.map((doc) => (
+          <li>
+            <a href={`/governance/${doc.id}`} class="card group block no-underline">
+              <h2 class="text-xl font-semibold tracking-tight group-hover:text-accent">{doc.data.title}</h2>
+              {doc.data.description && <p class="text-sm text-muted mt-2 leading-relaxed">{doc.data.description}</p>}
+            </a>
+          </li>
+        ))}
+    </ul>
+  </section>
+</Layout>

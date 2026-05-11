@@ -1,0 +1,30 @@
+---
+import { render } from 'astro:content';
+import DocArticle from '../../components/DocArticle.astro';
+import Layout from '../../layouts/Layout.astro';
+import { formatPostDate, getPublishedPosts } from '../../lib/collections';
+
+export const getStaticPaths = async () => {
+  const posts = await getPublishedPosts();
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+};
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Layout title={post.data.title} description={post.data.description} type="article">
+  <DocArticle homeHref="/blog" homeLabel="Blog">
+    <time slot="trailing" datetime={post.data.pubDate.toISOString()}>{formatPostDate(post.data.pubDate)}</time>
+
+    <header slot="header" class="mb-8">
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight leading-tight">{post.data.title}</h1>
+      <p class="text-muted mt-3 text-sm">By {post.data.author}</p>
+    </header>
+
+    <Content />
+  </DocArticle>
+</Layout>

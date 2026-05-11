@@ -7,6 +7,8 @@ pre-commit:
       run: pnpm run lint:knip
     - name: typecheck
       run: pnpm run lint:types
+    - name: astro
+      run: pnpm run lint:astro
 
 commit-msg:
   jobs:

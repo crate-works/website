@@ -1,23 +1,63 @@
+---
+import Nav from '../components/Nav.astro';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article';
+}
+
+const { title, description = 'A workbench of open-source tools for RO-Crate research data.', image = '/og-default.png', type = 'website' } = Astro.props;
+
+const fullTitle = title ? `${title} · CrateWorks` : 'CrateWorks';
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const ogImage = new URL(image, Astro.site).href;
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="en-AU">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" href="/favicon.ico">
+    <link rel="alternate" type="application/rss+xml" title="CrateWorks" href="/rss.xml">
+    <link rel="canonical" href={canonical}>
     <meta name="generator" content={Astro.generator}>
-    <title>Astro Basics</title>
+    <meta name="description" content={description}>
+    <title>{fullTitle}</title>
+
+    <meta property="og:type" content={type}>
+    <meta property="og:site_name" content="CrateWorks">
+    <meta property="og:title" content={fullTitle}>
+    <meta property="og:description" content={description}>
+    <meta property="og:url" content={canonical}>
+    <meta property="og:image" content={ogImage}>
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content={fullTitle}>
+    <meta name="twitter:description" content={description}>
+    <meta name="twitter:image" content={ogImage}>
   </head>
-  <body>
-    <slot />
+  <body class="min-h-screen flex flex-col">
+    <Nav />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <footer class="border-t border-border mt-24 px-6 py-10 text-sm text-muted">
+      <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4">
+        <span>&copy; {new Date().getFullYear()} CrateWorks</span>
+        <ul class="flex flex-wrap gap-6 list-none p-0 m-0">
+          <li><a href="/blog" class="hover:text-accent">Blog</a></li>
+          <li><a href="/governance" class="hover:text-accent">Governance</a></li>
+          <li><a href="/rss.xml" class="hover:text-accent">RSS</a></li>
+          <li>
+            <a href="https://github.com/crate-works" class="hover:text-accent" rel="noopener noreferrer" target="_blank">GitHub</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
-
-<style>
-html,
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-}
-</style>

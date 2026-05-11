@@ -1,0 +1,20 @@
+---
+import Logo from './Logo.astro';
+import Wordmark from './Wordmark.astro';
+---
+
+<nav class="flex items-center justify-between gap-6 px-6 py-4 border-b border-border">
+  <a href="/" class="flex items-center gap-3 no-underline hover:opacity-80 transition-opacity">
+    <Logo size={36} class="text-accent" />
+    <Wordmark class="text-xl" />
+  </a>
+
+  <ul class="flex items-center gap-6 text-sm list-none p-0 m-0">
+    <li><a href="/#workbench" class="hover:text-accent">Tools</a></li>
+    <li><a href="/blog" class="hover:text-accent">Blog</a></li>
+    <li><a href="/governance" class="hover:text-accent">Governance</a></li>
+    <li>
+      <a href="https://github.com/crate-works" class="hover:text-accent" rel="noopener noreferrer" target="_blank">GitHub</a>
+    </li>
+  </ul>
+</nav>
