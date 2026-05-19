@@ -14,7 +14,7 @@ This document lists the members of the Organisation's Steering Committee. Voting
 | Peter Sefton    | [@ptsefton](https://github.com/ptsefton)       | LDaCA           |
 | Moises Sacal    | [@moisbo](https://github.com/moisbo)           | LDaCA           |
 
-_Additional voting members will be added by Steering Committee vote as the Organisation forms._
+_Additional voting members will be added by Steering Committee vote as the Organisation forms with an open call for those wishing to join._
 
 ---
 

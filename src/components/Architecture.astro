@@ -3,10 +3,8 @@ const layers = [
   {
     title: "It's RO-Crates all the way down",
     body: 'The data format. A JSON-LD metadata file that describes a research dataset and everything inside it. Everything in CrateWorks is built around RO-Crates',
-
   },
 
- 
   {
     title: 'Component: Storage layer',
     body: 'A project starts by choosing a storage layer - a place to put your RO-Crates; a simple set of directories (as used by RasboCrate) or "H51v2" an archival-quality, version controlled Oxford Common Filesystem Layout (OCFL), or roll your own',
@@ -20,10 +18,10 @@ const layers = [
     title: 'Data Portals',
     body: 'From simple static websites to full-scale data marts, data can be made available on the web via AROCAPI or directly for a single RO-Crate. Oni is one top-level portal option.',
   },
-    {
+  {
     title: 'Tools',
     body: 'Data preparation, adding metadata, transcribing, annotating through to analysing data - tools just need to understand RO-Crate and they can be slotted-in anywhere in the data-journey, using the API or directly on an RO-Crate',
-  }
+  },
 ];
 
 const mermaidDiagram = `%%{init: {'theme':'base','themeVariables': {'background':'#ffffff','primaryColor':'#ffffff','primaryBorderColor':'#f97316','lineColor':'#f97316','tertiaryColor':'#ffffff','clusterBkg':'#ffffff','clusterBorder':'#f97316','defaultLinkColor':'#f97316'}}}%%
@@ -60,9 +58,7 @@ flowchart TB
 <section id="architecture" class="px-6 py-10 sm:py-14 bg-white">
   <div class="max-w-6xl mx-auto">
     <h2 class="text-3xl font-bold tracking-tight mb-3">The foundation</h2>
-    <p class="text-muted max-w-2xl mb-12">
-      Two specifications, two main architectural components tied together with an API and many tools
-    </p>
+    <p class="text-muted max-w-2xl mb-12">Two specifications, two main architectural components tied together with an API and many tools</p>
 
     <div class="grid sm:grid-cols-2 gap-8 items-start">
       <ol class="space-y-5 list-none p-0 m-0">
@@ -85,20 +81,20 @@ flowchart TB
 </section>
 
 <script>
-  import mermaid from 'mermaid';
+import mermaid from 'mermaid';
 
-  mermaid.initialize({
-    startOnLoad: false,
-    securityLevel: 'loose',
-  });
+mermaid.initialize({
+  startOnLoad: false,
+  securityLevel: 'loose',
+});
 
-  const renderMermaid = async () => {
-    await mermaid.run({ querySelector: '.mermaid' });
-  };
+const renderMermaid = async () => {
+  await mermaid.run({ querySelector: '.mermaid' });
+};
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', renderMermaid, { once: true });
-  } else {
-    renderMermaid();
-  }
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', renderMermaid, { once: true });
+} else {
+  renderMermaid();
+}
 </script>

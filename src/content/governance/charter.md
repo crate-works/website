@@ -9,7 +9,7 @@ This is the organisational charter for CrateWorks (the "Organisation"). By addin
 
 ## 1. Mission
 
-CrateWorks exists to maintain an RO-Crate API specification and steward the open-source tools that speak it. Our goal is a composable, interoperable workbench that lets researchers, archivists, and developers swap any tool for any other and trust the pieces still fit together, because they all share the same data format and access protocol.
+CrateWorks exists to maintain a set of Open Source tools and specifications for archiving and working with data. These tools all follow the Protocols for Implementing Long-term Archival Repository Services ([PILARS]). These tools include An RO-Crate API specification and the open-source tools work with it. Our goal is a composable, interoperable workbench that lets researchers, archivists, and developers swap any tool for any other and trust the pieces still fit together, because they all share the same data format and access protocol.
 
 ## 2. Steering Committee
 
@@ -55,3 +55,6 @@ Amendments to this charter or the [code of conduct](/governance/code-of-conduct)
 
 ---
 Adapted from [MVG-0.1-beta](https://github.com/github/MVG) by GitHub, licensed under the [CC-BY 4.0 License](https://creativecommons.org/licenses/by/4.0/).
+
+
+[PILARS]: https://w3id.org/ldac/pilars 
