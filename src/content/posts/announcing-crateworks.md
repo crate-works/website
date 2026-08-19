@@ -56,5 +56,5 @@ In the coming months we'll be:
 - Standing up `<tool>.crate-works.org` subdomains for each project so they have their own homes.
 - Publishing the next post here — on the API design choices we've made and why.
 
-If your work touches research data and you've been waiting for something like this, we'd love to hear from you. Watch the [GitHub organisation](https://github.com/crate-works), subscribe to the [RSS feed](/rss.xml), or open an issue against the [API spec](https://github.com/Language-Research-Technology/ro-crate-api).
+If your work touches research data and you've been waiting for something like this, we'd love to hear from you. Watch the [GitHub organisation](https://github.com/crate-works), subscribe to the [RSS feed](/rss.xml), or open an issue against the [API spec](https://github.com/crate-works/ro-crate-api).
 
