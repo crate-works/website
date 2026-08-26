@@ -32,7 +32,7 @@ If you've ever wanted to swap out your archive's discovery portal without rewrit
 - **Collection Downloader** — bulk-export via email.
 - **Cockatiel** — a local-first audio annotator that never sends your files to a server.
 - **RaspboCrate** — a self-contained field-catalogue appliance on a Raspberry Pi.
-- **Static RO-Crate Viewer** — browse an archive by double-clicking `index.html`.
+- **Bowerbird** — browse an archive by double-clicking `index.html`.
 - **Crate-O** (Alpha) - Edit RO-Crates using Machine Actionable Schemas and profiles
 - **An RO-Crate API specification** itself, evolving in the open.
 
