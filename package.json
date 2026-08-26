@@ -15,22 +15,22 @@
     "lint:astro": "astro check"
   },
   "dependencies": {
-    "@astrojs/mdx": "^7.0.5",
+    "@astrojs/mdx": "^7.0.8",
     "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.3",
-    "astro": "^7.2.2",
-    "mermaid": "^11.16.1"
+    "astro": "^7.2.6",
+    "mermaid": "^11.17.1"
   },
   "packageManager": "pnpm@11.22.0",
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
-    "@biomejs/biome": "^2.5.9",
+    "@biomejs/biome": "^2.5.10",
     "@commitlint/cli": "^21.2.2",
     "@commitlint/config-conventional": "^21.2.2",
     "@commitlint/types": "^21.2.0",
     "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.3.3",
-    "@types/node": "^26.2.0",
+    "@types/node": "^26.3.0",
     "knip": "^6.32.2",
     "lefthook": "^2.1.10",
     "tailwindcss": "^4.3.3",
