@@ -7,7 +7,12 @@ const layers = [
 
   {
     title: 'Component: Storage layer',
-    body: 'A project starts by choosing a storage layer - a place to put your RO-Crates; a simple set of directories (as used by RasboCrate) or "H51v2" an archival-quality, version controlled Oxford Common Filesystem Layout (OCFL), or roll your own',
+    body: 'A project starts by choosing a storage layer - a place to put your RO-Crates; a simple set of directories (as used by RasboCrate), or "LDaC", an archival-quality, version-controlled Oxford Common Filesystem Layout (OCFL) or your own storage layer',
+    sub: [
+      { label: 'Language Data Commons of Australia', href: 'https://www.ldaca.edu.au/' },
+      { label: 'RAPID Community Data Lab', href: 'https://rapid-cdl.edu.au/' },
+      { label: 'NABU: PARADISEC catalogue', href: 'https://paradisec.org.au/' },
+    ],
   },
 
   {
@@ -19,7 +24,7 @@ const layers = [
     body: 'From simple static websites to full-scale data marts, data can be made available on the web via AROCAPI or directly for a single RO-Crate. Oni is one top-level portal option.',
   },
   {
-    title: 'Tools',
+    title: 'Workspaces',
     body: 'Data preparation, adding metadata, transcribing, annotating through to analysing data - tools just need to understand RO-Crate and they can be slotted-in anywhere in the data-journey, using the API or directly on an RO-Crate',
   },
 ];
@@ -32,30 +37,40 @@ flowchart TB
     SV["Static Viewer"]
   end
 
+  subgraph WS["Workspaces"]
+    direction TB
+    C2C["Collection2Crate"]
+  end
+
   subgraph ST["Storage Layer"]
     direction TB
-    API(["ARPOCAPI"])
-    H51["H51v2"]
+    API(["AROCAPI"])
+    LDAC["LDAC"]
     RAS["Raspbo Crate"]
-    API --> H51
-    API --> RAS
+    RAPID["RAPID"]
+    NABU["NABU"]
+    API <--> LDAC
+    API <--> RAS
+    API <--> RAPID
+    API <--> NABU
   end
 
   DP --> ST
+  WS --> ST
 
-  linkStyle 0,1 stroke:transparent,fill:transparent,stroke-width:2px;
-  linkStyle 2 stroke:#f97316,stroke-width:2.5px;
+  linkStyle 0,1 stroke:#f97316,fill:transparent,stroke-width:2.5px;
+  linkStyle 2,3 stroke:#f97316,stroke-width:2.5px;
 
   classDef main fill:#ffffff,stroke:#f97316,stroke-width:2px,color:#111827;
   classDef option fill:#ffffff,stroke:#f97316,stroke-width:1.5px,color:#111827;
   classDef tool fill:#ffffff,stroke:#f97316,stroke-width:1.5px,color:#111827,stroke-dasharray: 4 3;
 
-  class DP,API,ST main;
-  class ONI,SV,H51,RAS option;
+  class DP,API,ST,WS main;
+  class ONI,SV,LDAC,RAS,RAPID,NABU option;
 `;
 ---
 
-<section id="architecture" class="px-6 py-10 sm:py-14 bg-white">
+<section id="architecture" class="px-6 py-10 sm:py-14 bg-bg">
   <div class="max-w-6xl mx-auto">
     <h2 class="text-3xl font-bold tracking-tight mb-3">The foundation</h2>
     <p class="text-muted max-w-2xl mb-12">Two specifications, two main architectural components tied together with an API and many tools</p>
@@ -68,6 +83,25 @@ flowchart TB
               <div>
                 <h3 class="font-semibold text-lg">{layer.title}</h3>
                 <p class="text-muted text-sm leading-relaxed">{layer.body}</p>
+                {layer.sub && (
+                  <p class="mt-2 text-muted text-sm leading-relaxed">
+                    Current implementations include{' '}
+                    {layer.sub.map((implementation, index) => (
+                      <>
+                        {index > 0 && (index === layer.sub.length - 1 ? ', and ' : ', ')}
+                        <a
+                          href={implementation.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="font-medium text-accent underline underline-offset-2 hover:opacity-80"
+                        >
+                          {implementation.label}
+                        </a>
+                      </>
+                    ))}
+                    .
+                  </p>
+                )}
               </div>
             </li>
           ))}
