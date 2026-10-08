@@ -7,11 +7,12 @@ const layers = [
 
   {
     title: 'Component: Storage layer',
-    body: 'A project starts by choosing a storage layer - a place to put your RO-Crates; a simple set of directories (as used by RasboCrate), or "LDaC", an archival-quality, version-controlled Oxford Common Filesystem Layout (OCFL) or your own storage layer',
+    body: 'A project starts by choosing a storage layer - a place to put your RO-Crates; a simple set of directories (as used by RasboCrate), or an archival-quality, version-controlled Oxford Common Filesystem Layout (OCFL) or your own storage layer',
     sub: [
-      { label: 'Language Data Commons of Australia', href: 'https://www.ldaca.edu.au/' },
+      { label: 'LDaC: Language Data Commons of Australia', href: 'https://www.ldaca.edu.au/' },
       { label: 'RAPID Community Data Lab', href: 'https://rapid-cdl.edu.au/' },
-      { label: 'NABU: PARADISEC catalogue', href: 'https://paradisec.org.au/' },
+      { label: 'RaspboCrate', href: 'https://raspbocrate.crate-works.org' },
+      { label: 'Nabu: PARADISEC catalogue', href: 'https://paradisec.org.au/' },
     ],
   },
 
@@ -44,29 +45,38 @@ flowchart TB
 
   subgraph ST["Storage Layer"]
     direction TB
-    API(["AROCAPI"])
-    LDAC["LDAC"]
-    RAS["Raspbo Crate"]
+    LDAC["LDaC"]
     RAPID["RAPID"]
-    NABU["NABU"]
-    API <--> LDAC
-    API <--> RAS
-    API <--> RAPID
-    API <--> NABU
+    RAS["RaspboCrate"]
+    NABU["Nabu"]
+    API(["AROCAPI"])
+
+    OCFL("OCFL")
+    S3("AWS S3")
+    FILES("Flat Folders")
+
+    LDAC <--> OCFL  
+    RAPID <--> OCFL
+    RAS <--> FILES
+    NABU <--> S3
+    OCFL <--> API
+    FILES <--> API
+    S3 <--> API
+    
   end
 
   DP --> ST
   WS --> ST
 
-  linkStyle 0,1 stroke:#f97316,fill:transparent,stroke-width:2.5px;
-  linkStyle 2,3 stroke:#f97316,stroke-width:2.5px;
+  linkStyle 0,1,2,3 stroke:#f97316,fill:transparent,stroke-width:2.5px;
+  linkStyle 2,3,4,5,6 stroke:#f97316,stroke-width:2.5px;
 
   classDef main fill:#ffffff,stroke:#f97316,stroke-width:2px,color:#111827;
   classDef option fill:#ffffff,stroke:#f97316,stroke-width:1.5px,color:#111827;
   classDef tool fill:#ffffff,stroke:#f97316,stroke-width:1.5px,color:#111827,stroke-dasharray: 4 3;
 
   class DP,API,ST,WS main;
-  class ONI,SV,LDAC,RAS,RAPID,NABU option;
+  class ONI,SV,LDAC,RAS,RAPID,NABU,FILES,S3,OCFL option;
 `;
 ---
 
